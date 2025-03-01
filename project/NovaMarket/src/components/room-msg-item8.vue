@@ -1,5 +1,5 @@
 <script setup>
-import RoomMsgComment from './room-msg-comment.vue';
+import RoomMsgComment from './room-msg-comment8.vue';
 </script>
 
 <template>

@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import TestCom from './components/test-com.vue';
+import TestCom from './components/test-com7.vue';
 //1.调用ref函数创建一个ref对象
 const h1Ref = ref(null);
 

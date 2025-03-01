@@ -1,7 +1,7 @@
 <script setup>
 //setup语法糖下局部组件不需要注册直接可以使用
 import { ref } from 'vue';
-import sonCom from './components/son-com.vue';
+import sonCom from './components/son-com6.vue';
 
 const count = ref(0);
 

@@ -1,6 +1,6 @@
 <script setup>
 import { provide,ref } from 'vue';
-import RoomMsgItem from './room-msg-item.vue';
+import RoomMsgItem from './room-msg-item8.vue';
 //传递数据
 provide('key','这是静态数据')
 
