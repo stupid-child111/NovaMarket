@@ -115,4 +115,17 @@ component: Home
     color.adjust 这类颜色相关的函数被封装在 **sass:color 模块中。开头导入**@use 'sass:color';
 
 
+
+## layout静态模板搭建
+    nav   header  二级路由出口区域  footer
+    偏移移除main中引入的css样式
     使用common.scss不适配
+
+## layout 字体图标的引入
+
+客户服务 关注我们 空白 字体小图标未引入
+引入阿里字体图标库 本项目采用 **font-class** 引用
+1.拷贝按项目下生成的fontclass代码
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2143783_iq6z4ey5vu.css">
+2.挑选对应图标并获取类名，应用于页面
+<i class="iconfont icon-user"></i>
