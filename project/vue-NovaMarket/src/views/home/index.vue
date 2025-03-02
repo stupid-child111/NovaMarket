@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    我是home页面
+    我是home页面 我是home页面 我是home页面 我是home页面 我是home页面 我是home页面 我是home页面 我是home页面 
 </template>
 
 <style lang="scss" scoped>

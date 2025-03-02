@@ -84,3 +84,35 @@ component: Home
 实际无法通过正常访问触发（浏览器会自动去除 URL 中的首尾空格）
 
 导致默认子路由失效，根路径 / 下不会渲染 Home 组件
+
+## 静态资源和样式资源
+  图片资源
+  样式资源：通常指项目初始化的时候进行样式重置，开源的normalize.css或者手写
+
+  资源操作
+  图片资源-images文件夹放在爱上assets目录下
+  样式资源-common.scss放在styles目录下
+
+  main.js引入初始化静态资源文件
+  error lens 实时提供错误警告信息的插件
+
+  ## scss文件自动导入
+  - 在项目中一些**组件共享的色值会以scss变量的方式统一放到一个名为var.scss**的文件中
+  正常组件中使用，需要先导入scss文件，再使用内部变量，比较繁琐，**自动导入可以免去手动导入，直接使用内部变量**
+
+  - 新增var.scss文件，存入色值变量
+  - 通过vite.config.js配置自动导入文件(@use "@/styles/var.scss" as *;)
+
+  common.scss报错
+    Deprecation Warning [global-builtin]: Global built-in functions are deprecated and will be    removed in Dart Sass 3.0.0.
+    Use color.adjust instead.
+
+    此警告表明全局内置函数已经被弃用，在 Dart Sass 3.0.0 版本中会被移除。这里特别指出应该使用 color.adjust 函数来替代当前使用的函数。
+    // 原代码
+       color: darken(#6C5CE7, 10%);
+    // 替换后
+       color: color.adjust(#6C5CE7, $lightness: -10%);
+    color.adjust 这类颜色相关的函数被封装在 **sass:color 模块中。开头导入**@use 'sass:color';
+
+
+    使用common.scss不适配

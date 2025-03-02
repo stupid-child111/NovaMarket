@@ -1,111 +1,4 @@
-// // 重置样式
-// * {
-//   box-sizing: border-box;
-// }
-
-// html {
-//   height: 100%;
-//   font-size: 14px;
-// }
-// body {
-//   height: 100%;
-//   color: #333;
-//   min-width: 1240px;
-//   font: 1em/1.4 'Microsoft Yahei', 'PingFang SC', 'Avenir', 'Segoe UI',
-//     'Hiragino Sans GB', 'STHeiti', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei',
-//     sans-serif;
-// }
-// body,
-// ul,
-// h1,
-// h3,
-// h4,
-// p,
-// dl,
-// dd {
-//   padding: 0;
-//   margin: 0;
-// }
-// a {
-//   text-decoration: none;
-//   color: #333;
-//   outline: none;
-// }
-// i {
-//   font-style: normal;
-// }
-// input[type='text'],
-// input[type='search'],
-// input[type='password'],
-// input[type='checkbox'] {
-//   padding: 0;
-//   outline: none;
-//   border: none;
-//   -webkit-appearance: none;
-//   &::placeholder {
-//     color: #ccc;
-//   }
-// }
-// img {
-//   max-width: 100%;
-//   max-height: 100%;
-//   vertical-align: middle;
-//   background: #ebebeb url('@/assets/images/200.png') no-repeat center / contain;
-// }
-// ul {
-//   list-style: none;
-// }
-
-// #app {
-//   background: #f5f5f5;
-//   user-select: none;
-// }
-
-// .container {
-//   width: 1240px;
-//   margin: 0 auto;
-//   position: relative;
-// }
-// .ellipsis {
-//   white-space: nowrap;
-//   text-overflow: ellipsis;
-//   overflow: hidden;
-// }
-
-// .ellipsis-2 {
-//   word-break: break-all;
-//   text-overflow: ellipsis;
-//   display: -webkit-box;
-//   -webkit-box-orient: vertical;
-//   -webkit-line-clamp: 2;
-//   overflow: hidden;
-// }
-
-// .fl {
-//   float: left;
-// }
-
-// .fr {
-//   float: right;
-// }
-
-// .clearfix:after {
-//   content: '.';
-//   display: block;
-//   visibility: hidden;
-//   height: 0;
-//   line-height: 0;
-//   clear: both;
-// }
-
-// // reset element
-// .el-breadcrumb__inner.is-link {
-//   font-weight: 400 !important;
-// }
-
-
-// 基于NovaMarket品牌规范的重置样式
-@use 'sass:color';
+// 重置样式
 * {
   box-sizing: border-box;
 }
@@ -114,31 +7,33 @@ html {
   height: 100%;
   font-size: 14px;
 }
-
 body {
   height: 100%;
-  color: #2D3436; // 品牌深色系文字
+  color: #333;
   min-width: 1240px;
-  font: 1em/1.4 'Poppins', 'Inter', 'Roboto', 
-    'Hiragino Sans GB', 'Microsoft Yahei', system-ui, sans-serif;
-  background: #F8F9FA; // 品牌中性背景色
+  font: 1em/1.4 'Microsoft Yahei', 'PingFang SC', 'Avenir', 'Segoe UI',
+    'Hiragino Sans GB', 'STHeiti', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei',
+    sans-serif;
 }
-
 body,
-ul, h1, h3, h4, p, dl, dd {
+ul,
+h1,
+h3,
+h4,
+p,
+dl,
+dd {
   padding: 0;
   margin: 0;
 }
-
 a {
   text-decoration: none;
-  color: #6C5CE7; // 品牌主色链接
-  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    color: color.adjust(#6C5CE7, $lightness: -10%);
-  }
+  color: #333;
+  outline: none;
 }
-
+i {
+  font-style: normal;
+}
 input[type='text'],
 input[type='search'],
 input[type='password'],
@@ -148,20 +43,21 @@ input[type='checkbox'] {
   border: none;
   -webkit-appearance: none;
   &::placeholder {
-    color: #ADB5BD; // 中性浅灰色
+    color: #ccc;
   }
 }
-
 img {
   max-width: 100%;
   max-height: 100%;
   vertical-align: middle;
-  background: #F8F9FA url('@/assets/images/200.png') no-repeat center / contain; // 品牌中性背景
+  background: #ebebeb url('@/assets/images/200.png') no-repeat center / contain;
+}
+ul {
+  list-style: none;
 }
 
 #app {
-  background: #FFFFFF; // 纯白容器背景
-  min-height: 100vh;
+  background: #f5f5f5;
   user-select: none;
 }
 
@@ -169,11 +65,7 @@ img {
   width: 1240px;
   margin: 0 auto;
   position: relative;
-  background: #FFFFFF;
-  box-shadow: 0 2px 8px rgba(#2D3436, 0.08); // 品牌深色系投影
 }
-
-// 文字截断规范
 .ellipsis {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -187,46 +79,159 @@ img {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  line-height: 1.5; // 优化多行显示
 }
 
-// 布局工具类
-.fl { float: left; }
-.fr { float: right; }
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
 
 .clearfix:after {
-  content: '';
-  display: table;
+  content: '.';
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
   clear: both;
 }
 
-// Element Plus组件定制
+// reset element
 .el-breadcrumb__inner.is-link {
-  color: #6C5CE7 !important; // 品牌主色
-  font-weight: 500 !important;
-  &:hover {
-    color: color.adjust(#6C5CE7, $lightness: -15%) !important;
-  }
+  font-weight: 400 !important;
 }
 
-.el-button--primary {
-  background-color: #6C5CE7 !important;
-  border-color: #6C5CE7 !important;
-  &:hover {
-    background-color: color.adjust(#6C5CE7, $lightness: 8%) !important;
-  }
-}
 
-.el-tag--success {
-  background-color: rgba(#FF9F43, 0.1) !important; // 活力橙作为成功色
-  border-color: rgba(#FF9F43, 0.3) !important;
-  color: #FF9F43 !important;
-}
 
-// 新增暗色模式适配注释
-// @media (prefers-color-scheme: dark) {
-//   body {
-//     background: #1A1A1A;
-//     color: #E0E0E0;
+
+
+
+
+// // 基于NovaMarket品牌规范的重置样式
+// @use 'sass:color';
+// * {
+//   box-sizing: border-box;
+// }
+
+// html {
+//   height: 100%;
+//   font-size: 14px;
+// }
+
+// body {
+//   height: 100%;
+//   color: #2D3436; // 品牌深色系文字
+//   min-width: 1240px;
+//   font: 1em/1.4 'Poppins', 'Inter', 'Roboto', 
+//     'Hiragino Sans GB', 'Microsoft Yahei', system-ui, sans-serif;
+//   background: #F8F9FA; // 品牌中性背景色
+// }
+
+// body,
+// ul, h1, h3, h4, p, dl, dd {
+//   padding: 0;
+//   margin: 0;
+// }
+
+// a {
+//   text-decoration: none;
+//   color: #6C5CE7; // 品牌主色链接
+//   transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+//   &:hover {
+//     color: color.adjust(#6C5CE7, $lightness: -10%);
 //   }
 // }
+
+// input[type='text'],
+// input[type='search'],
+// input[type='password'],
+// input[type='checkbox'] {
+//   padding: 0;
+//   outline: none;
+//   border: none;
+//   -webkit-appearance: none;
+//   &::placeholder {
+//     color: #ADB5BD; // 中性浅灰色
+//   }
+// }
+
+// img {
+//   max-width: 100%;
+//   max-height: 100%;
+//   vertical-align: middle;
+//   background: #F8F9FA url('@/assets/images/200.png') no-repeat center / contain; // 品牌中性背景
+// }
+
+// #app {
+//   background: #FFFFFF; // 纯白容器背景
+//   min-height: 100vh;
+//   user-select: none;
+// }
+
+// .container {
+//   width: 1240px;
+//   margin: 0 auto;
+//   position: relative;
+//   background: #FFFFFF;
+//   box-shadow: 0 2px 8px rgba(#2D3436, 0.08); // 品牌深色系投影
+// }
+
+// // 文字截断规范
+// .ellipsis {
+//   white-space: nowrap;
+//   text-overflow: ellipsis;
+//   overflow: hidden;
+// }
+
+// .ellipsis-2 {
+//   word-break: break-all;
+//   text-overflow: ellipsis;
+//   display: -webkit-box;
+//   -webkit-box-orient: vertical;
+//   -webkit-line-clamp: 2;
+//   overflow: hidden;
+//   line-height: 1.5; // 优化多行显示
+// }
+
+// // 布局工具类
+// .fl { float: left; }
+// .fr { float: right; }
+
+// .clearfix:after {
+//   content: '';
+//   display: table;
+//   clear: both;
+// }
+
+// // Element Plus组件定制
+// .el-breadcrumb__inner.is-link {
+//   color: #6C5CE7 !important; // 品牌主色
+//   font-weight: 500 !important;
+//   &:hover {
+//     color: color.adjust(#6C5CE7, $lightness: -15%) !important;
+//   }
+// }
+
+// .el-button--primary {
+//   background-color: #6C5CE7 !important;
+//   border-color: #6C5CE7 !important;
+//   &:hover {
+//     background-color: color.adjust(#6C5CE7, $lightness: 8%) !important;
+//   }
+// }
+
+// .el-tag--success {
+//   background-color: rgba(#FF9F43, 0.1) !important; // 活力橙作为成功色
+//   border-color: rgba(#FF9F43, 0.3) !important;
+//   color: #FF9F43 !important;
+// }
+
+// // 新增暗色模式适配注释
+// // @media (prefers-color-scheme: dark) {
+// //   body {
+// //     background: #1A1A1A;
+// //     color: #E0E0E0;
+// //   }
+// // }

@@ -6,9 +6,9 @@
   <div>
     <!-- 一级路由出口 -->
     <RouterView />
-    <div class="test">
+    <!-- <div class="test">
       test  scss
-    </div>
+    </div> -->
   </div>
 </template>
 
