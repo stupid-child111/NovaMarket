@@ -1,0 +1,49 @@
+/* 只需要重写你需要的即可 */
+// @forward 'element-plus/theme-chalk/src/common/var.scss' with (
+//   $colors: (
+//     'primary': (
+//       // 主色
+//       'base': #27ba9b,
+//     ),
+//     'success': (
+//       // 成功色
+//       'base': #1dc779,
+//     ),
+//     'warning': (
+//       // 警告色
+//       'base': #ffb302,
+//     ),
+//     'danger': (
+//       // 危险色
+//       'base': #e26237,
+//     ),
+//     'error': (
+//       // 错误色
+//       'base': #cf4444,
+//     ),
+//   )
+// )
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      // 科技紫主色（品牌核心色）
+      'base': #6C5CE7,
+    ),
+    'success': (
+      // 活力橙（用于成功状态/促销标签）
+      'base': #FF9F43,
+    ),
+    'warning': (
+      // 浅灰白（中性警告提示）
+      'base': #F8F9FA,
+    ),
+    'danger': (
+      // 碳黑（高危操作警示）
+      'base': #2D3436,
+    ),
+    'error': (
+      // 深紫色（错误状态增强对比）
+      'base': #4A3F8C,
+    ),
+  )
+)
