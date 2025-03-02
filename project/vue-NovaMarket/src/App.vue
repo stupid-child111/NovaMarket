@@ -1,11 +1,11 @@
 <script setup>
-//这个配置项只做联想提示
-import HelloWorld from './components/HelloWorld.vue'
+//这个配置项只做联想提示，不会影响代码的编译
 </script>
 
 <template>
   <div>
-    <el-button type="primary" disabled>Primary</el-button>
+    <!-- 一级路由出口 -->
+    <RouterView />
   </div>
 </template>
 

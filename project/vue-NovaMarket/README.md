@@ -40,3 +40,47 @@ scss变量替换方案  安装scss(npm i sass -D)-->准备定制样式文件(sty
 
 uitls下基础封装(不挑项目都是如此)基地址，超时时间配置，请求和响应拦截器
 apis 创建实例进行网络请求
+-  如果项目不同业务模块需要接口基地址不同？
+  axios.create()方法可以执行多次
+
+## 路由设置
+设置首页和登录页的路由(一级路由)
+路由设置原则：找**内容整体切换**的
+
+每一层路由都需要有路由出口
+
+设计分类页和默认Home页路由(二级路由)
+路由设置原则：如果是在**一级路由的内部切换**，则为二级路由
+
+
+**mian.js没有引入router**
+App.vue:2 
+ [Vue warn]: Failed to resolve component: RouterView
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at <App>
+
+  path: ""（空字符串）
+
+
+**二级子路由问题**
+path: "",
+component: Home
+行为：
+
+当访问根路径 / 时，自动匹配该子路由
+
+正确写法，符合 Vue Router 的默认子路由规范
+
+Home 组件会渲染在 Layout 的 <router-view> 中
+
+2. path: " "（空格）
+
+path: " ",
+component: Home
+行为：
+
+路由路径被显式设置为空格字符，需访问 / （带空格的 URL）才能匹配
+
+实际无法通过正常访问触发（浏览器会自动去除 URL 中的首尾空格）
+
+导致默认子路由失效，根路径 / 下不会渲染 Home 组件
