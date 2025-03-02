@@ -105,6 +105,7 @@
 
 
 // 基于NovaMarket品牌规范的重置样式
+@use 'sass:color';
 * {
   box-sizing: border-box;
 }
@@ -134,7 +135,7 @@ a {
   color: #6C5CE7; // 品牌主色链接
   transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
-    color: darken(#6C5CE7, 10%);
+    color: color.adjust(#6C5CE7, $lightness: -10%);
   }
 }
 
@@ -204,7 +205,7 @@ img {
   color: #6C5CE7 !important; // 品牌主色
   font-weight: 500 !important;
   &:hover {
-    color: darken(#6C5CE7, 15%) !important;
+    color: color.adjust(#6C5CE7, $lightness: -15%) !important;
   }
 }
 
@@ -212,7 +213,7 @@ img {
   background-color: #6C5CE7 !important;
   border-color: #6C5CE7 !important;
   &:hover {
-    background-color: lighten(#6C5CE7, 8%) !important;
+    background-color: color.adjust(#6C5CE7, $lightness: 8%) !important;
   }
 }
 
