@@ -147,3 +147,5 @@ component: Home
 **加深记忆**
   首页两个导航列表完全一致，但是需要两次网络请求(layoutFixed 和 layoutHeader)
   pinia集中状态管理，再把数据给组件使用
+
+## Home-整体结构搭建和分类实现
