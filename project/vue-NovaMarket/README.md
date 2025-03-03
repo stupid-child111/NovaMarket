@@ -129,3 +129,7 @@ component: Home
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2143783_iq6z4ey5vu.css">
 2.挑选对应图标并获取类名，应用于页面
 <i class="iconfont icon-user"></i>
+
+## 一级导航渲染
+  使用后端接口渲染以及路由导航
+  使用接口文档封装接口函数  -->发送请求获取数据列表  -->  v-for渲染列表
