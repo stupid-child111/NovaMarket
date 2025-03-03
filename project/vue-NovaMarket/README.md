@@ -149,3 +149,8 @@ component: Home
   pinia集中状态管理，再把数据给组件使用
 
 ## Home-整体结构搭建和分类实现
+## homeBanner 轮播图功能实现
+  - 准备模板 -->熟悉elementPlus相关组件 -->获取数据接口 -->渲染组件
+
+  ncaught SyntaxError: The requested module '/src/utils/http.js' does not provide an export named 'httpInstance' (at home.js:1:10)
+**导出（export）与导入（import）方式**不匹配导致
