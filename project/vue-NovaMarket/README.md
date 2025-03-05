@@ -208,3 +208,10 @@ defineProps({
  //动态路由传参
   path:"category/:id",
  <RouterLink :to="`/category/${item.id}`">{{ item.name }}</RouterLink>
+
+ ## 一级分类-面包屑导航渲染
+  让用户知道现在处于网站的哪个地方
+
+  准备组件模板 -->封装接口函数 -->调用接口获取数据(使用路由参数) -->渲染模板
+
+  位置query 对应axios 为params
