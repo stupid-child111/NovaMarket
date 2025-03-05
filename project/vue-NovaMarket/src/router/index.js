@@ -22,7 +22,9 @@ const router = createRouter({
                     component: Home
                 },
                 {
-                    path:"category",
+                    //动态路由传参
+                    //动态路由传参
+                    path:"category/:id",
                     component: Category
                 },
             ]

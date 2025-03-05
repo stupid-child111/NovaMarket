@@ -202,3 +202,9 @@ defineProps({
     }
 })
 注意命名和使用时候的一致
+
+## 一级分类开发-整体认识和路由配置
+
+ //动态路由传参
+  path:"category/:id",
+ <RouterLink :to="`/category/${item.id}`">{{ item.name }}</RouterLink>
