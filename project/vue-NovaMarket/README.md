@@ -154,3 +154,14 @@ component: Home
 
   ncaught SyntaxError: The requested module '/src/utils/http.js' does not provide an export named 'httpInstance' (at home.js:1:10)
 **导出（export）与导入（import）方式**不匹配导致
+
+## home面板组件封装
+  - 复用问题
+  - 业务维护问题
+   新鲜好物和人气推荐模块 结构非常相似，内容不同 通过组件封装实现复用结构的效果
+   思路：把可复用的结构只写一次，把可能发生变化的部分抽象成组件参数(props/插槽)
+   纯文本抽象成props
+   主体内容为复杂模板抽象成插槽
+   1.搭建纯静态内容，不管可变部分
+   2.抽象可变部分为组件参数
+     非模板 抽象为 props  模板  抽象为 插槽
