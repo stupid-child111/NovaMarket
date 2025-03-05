@@ -184,3 +184,21 @@ v-img-lazy熟悉指令语法-->判断视图是否进入(vueuse)-->测试图片�
 - 2.重复监听
 useIntersectionObserver 对于元素监听一直存在，除非手动停止监听，存在**内存浪费**
 监听的内容第一次完成加载之后就停止监听
+useIntersectionObserver 上存在 stop 方法 解构出来进行调用
+
+
+## product 产品列表实现
+
+熟悉并准备静态模板 --> 封装接口 --> 获取模板渲染数据 --> 图片懒加载
+
+## 封装GoodsItem组件
+-  多个业务模块使用到相同的商品展示模块，无需重复定义，封装起来，方便复用
+
+对象的默认值  使用工厂函数进行返回
+defineProps({
+    goods:{
+        type: Object,
+        default:() => {}
+    }
+})
+注意命名和使用时候的一致
