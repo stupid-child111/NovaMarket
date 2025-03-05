@@ -215,3 +215,19 @@ defineProps({
   准备组件模板 -->封装接口函数 -->调用接口获取数据(使用路由参数) -->渲染模板
 
   位置query 对应axios 为params
+
+
+## 一级分类-banner轮播图实现
+
+改造接口 --> 迁移首页轮播图逻辑
+export function getBannerAPI(params = {}){
+    const { distributionSite = '1' } = params
+    return httpInstance({
+        url:'/home/banner',
+        params:{
+            distributionSite
+        }
+    })
+}
+
+绝对定位溢出，修改
