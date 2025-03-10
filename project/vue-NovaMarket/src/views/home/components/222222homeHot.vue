@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import HomePanel from './homePanel.vue';
 import { findHotAPI } from '@/apis/home';
 import { onMounted, ref } from 'vue';
@@ -64,4 +64,18 @@ onMounted(() => getHotList())
     }
   }
 }
+</style> -->
+
+<template>
+  <div>
+
+  </div>
+</template>
+
+<script setup>
+
+</script>
+
+<style lang="scss" scoped>
+
 </style>

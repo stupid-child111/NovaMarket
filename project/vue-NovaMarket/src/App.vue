@@ -6,15 +6,15 @@
   <div>
     <!-- 一级路由出口 -->
     <RouterView />
-    <!-- <div class="test">
+    <div class="test">
       test  scss
-    </div> -->
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .test {
-  color: $sucColor;
+  color: $helpColor;
 }
 .logo {
   height: 6em;

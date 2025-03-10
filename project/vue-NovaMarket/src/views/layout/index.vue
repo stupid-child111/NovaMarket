@@ -20,7 +20,9 @@ onMounted(() => categoryStore.getCategory())
         <!-- 头部导航 -->
         <LayoutHeader />
         <!-- 二级路由出口 -->
-        <RouterView />
+         <!-- 添加独一无二的key，破坏复用机制。强制销毁重建 -->
+        <!-- <RouterView  :key="$route.fullPath"/> -->
+         <RouterView />
         <!-- 底部 -->
         <LayoutFooter />
 </template>
