@@ -1,5 +1,11 @@
 <script setup>
 import { ref } from 'vue';
+import { loginAPI } from '@/apis/user'
+
+// import 'element-plus/es/components/message/style/css'  可能发生样式覆盖
+import 'element-plus/theme-chalk/el-message.css'
+import { ElMessage } from 'element-plus';
+import { useRouter } from 'vue-router';
 //表单校验功能 (账号名 + 密码)
 //1、准备表单对象
 const form = ref({
@@ -34,12 +40,25 @@ const rules = {
 
 //3、获取form实例做统一校验
 const formRef = ref(null)
+const router = useRouter()
 const doLogin = () => {
+  //解构赋值  form有三个参数  而我们只需要两个
+  const { account,password } = form.value 
   //调用实例方法
-  formRef.value.validate((valid) => {
+  formRef.value.validate(async (valid) => {
     //valid: 所有表单都通过校验，采为true
     console.log(valid)
     //以valid作为判断条件，校验通过执行登录逻辑
+    if(valid){
+      //To do login
+      const res = await loginAPI({account,password})
+      console.log(res)
+      //成功后1、提示用户
+      ElMessage({type: 'success',message: '登录成功'})
+      //2、跳转首页
+      // router.push
+      router.replace({path:'/'})
+    }
   })
 }
 
@@ -255,7 +274,7 @@ const doLogin = () => {
           width: 100%;
 
           &.error {
-            border-color: $dangerColor;
+            border-color: $priceColor;
           }
 
           &.active,
@@ -283,7 +302,7 @@ const doLogin = () => {
         position: absolute;
         font-size: 12px;
         line-height: 28px;
-        color: $dangerColor;
+        color: $priceColor;
 
         i {
           font-size: 14px;
