@@ -9,6 +9,9 @@ import '@/styles/common.scss'
 //引入懒加载指令插件并注册
 import  lazyPlugin  from '@/directives'
 
+//引入全局组件插件
+import { componentPlugin } from '@/components'
+
 
 const pinia = createPinia()
 
@@ -24,6 +27,7 @@ const app = createApp(App)
 app.use(router)
 app.use(pinia)
 app.use(lazyPlugin)
+app.use(componentPlugin)
 app.mount('#app')
 //定义全局指令
 

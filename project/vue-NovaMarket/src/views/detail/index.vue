@@ -3,8 +3,9 @@ import DetailHot from './components/detailHot.vue';
 import { getDetail } from '@/apis/detail';
 import { onMounted, ref } from 'vue';
 import  { useRoute } from 'vue-router';
-import ImageView from '@/components/imageView/index.vue';
-import NovaMarketSku from '@/components/NovamarketSku/index.vue'
+// import ImageView from '@/components/imageView/index.vue';
+// import NovaMarketSku from '@/components/NovamarketSku/index.vue'
+//组件已经全局化注册，不用导入
 const goods = ref({});
 const route = useRoute();
 
@@ -54,7 +55,7 @@ const skuChange = (sku) => {
           <div class="goods-info">
             <div class="media">
               <!-- 图片预览区 -->
-               <ImageView :image-list="goods.mainPictures"/> 
+               <NovaMarketImageView :image-list="goods.mainPictures"/> 
               <!-- 统计数量 -->
               <ul class="goods-sales">
                 <li>

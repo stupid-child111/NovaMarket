@@ -35,7 +35,7 @@ const top = ref(0)
 const positionX = ref(0)
 const positionY = ref(0)
 watch([elementX,elementY],() => {
-  console.log('xy发生变化')  
+  // console.log('xy发生变化')  
   //如果鼠标没有移入盒子里面 直接不执行后面的逻辑！！！！
   if(isOutside.value) return 
   console.log('后面的逻辑执行了')  
